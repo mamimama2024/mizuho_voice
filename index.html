@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小島美寿穂 | Voice Portfolio</title>
+  <style>
+    :root {
+      --bg-color: #f8f9fa;
+      --card-bg: #ffffff;
+      --text-color: #2b2b2b;
+      --accent-color: #3b5998;
+      --border-color: #e9ecef;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Hiragino Kaku Gothic ProN", sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.7;
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .profile-img {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border: 3px solid #fff;
+    }
+    h1 { font-size: 2rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 8px; }
+    p.subtitle { color: #6c757d; font-size: 0.95rem; }
+    
+    section {
+      background: var(--card-bg);
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      border: 1px solid var(--border-color);
+    }
+    h2 {
+      font-size: 1.25rem;
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+    }
+    .audio-item {
+      margin-bottom: 20px;
+    }
+    .audio-item:last-child { margin-bottom: 0; }
+    .audio-title { font-weight: bold; font-size: 0.95rem; margin-bottom: 6px; }
+    audio { width: 100%; margin-top: 5px; }
+    
+    .profile-bio {
+      margin-bottom: 20px;
+      font-size: 0.95rem;
+      white-space: pre-wrap;
+    }
+    ul.profile-list { list-style: none; }
+    ul.profile-list li { margin-bottom: 10px; font-size: 0.95rem; }
+    ul.profile-list strong { display: inline-block; width: 110px; color: #495057; }
+    
+    .contact-btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background: var(--accent-color);
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 0;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: opacity 0.2s;
+    }
+    .contact-btn:hover { opacity: 0.9; }
+    
+    @media (max-width: 600px) {
+      .container { margin: 20px auto; padding: 0 10px; }
+      section { padding: 20px; }
+      ul.profile-list li strong { display: block; margin-bottom: 2px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <!-- 宣材写真の画像ファイル名（profile.jpg）を指定 -->
+      <img src="profile.jpg" alt="小島美寿穂" class="profile-img">
+      <h1>小島美寿穂</h1>
+      <p class="subtitle">Narrator / Voice Actor</p>
+    </header>
+
+    <!-- ボイスサンプル -->
+    <section>
+      <h2>Voice Samples</h2>
+      <div class="audio-item">
+        <div class="audio-title">メインボイスサンプル（CM / ナレーション）</div>
+        <audio controls src="sample.mp3"></audio>
+      </div>
+    </section>
+
+    <!-- プロフィール・実績 -->
+    <section>
+      <h2>Profile & Equipment</h2>
+      <!-- ここにお持ちのプロフィール文章を書き込んでください -->
+      <p class="profile-bio">
+ここにプロフィールの自己紹介文や経歴を入力します。
+ストレートナレーションからドキュメンタリー、CMまで、深みのある声でお応えします。
+      </p>
+      <ul class="profile-list">
+        <li><strong>ボイス傾向：</strong>ストレート、CM、ドキュメンタリー、VP</li>
+        <li><strong>収録環境：</strong>宅録可（DAW: Logic Pro / iZotope RX）</li>
+        <li><strong>使用機材：</strong>Apogee MiC Plus, Rycote InVision USM</li>
+      </ul>
+    </section>
+
+    <!-- お問い合わせ -->
+    <section>
+      <h2>Contact</h2>
+      <p style="margin-bottom: 15px; font-size: 0.9rem;">お仕事のご依頼・ボイスサンプルに関するお問い合わせはこちらからお願いいたします。</p>
+      <a href="mailto:your-email@example.com" class="contact-btn">お問い合わせはこちら</a>
+    </section>
+  </div>
+
+</body>
+</html>
