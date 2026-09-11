@@ -71,6 +71,9 @@
       color: var(--accent-color);
       margin: 16px 0 8px;
     }
+    .profile-section-title:first-child {
+      margin-top: 0;
+    }
     .history-list {
       list-style: none;
       padding-left: 0;
@@ -95,8 +98,17 @@
     .inline-link:hover { text-decoration: underline; }
 
     ul.profile-list { list-style: none; padding-left: 0; }
-    ul.profile-list li { margin-bottom: 8px; font-size: 0.88rem; }
-    ul.profile-list strong { display: inline-block; width: 100px; color: #495057; }
+    ul.profile-list li { 
+      margin-bottom: 8px; 
+      font-size: 0.88rem;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    ul.profile-list strong { 
+      width: 100px; 
+      color: #495057; 
+      flex-shrink: 0;
+    }
     
     /* SNSアイコン用スタイル */
     .sns-links a {
@@ -139,7 +151,8 @@
     @media (max-width: 600px) {
       .container { margin: 15px auto; padding: 0 5px; }
       section { padding: 18px; }
-      ul.profile-list li strong { display: block; margin-bottom: 2px; }
+      ul.profile-list li { display: block; }
+      ul.profile-list li strong { display: block; margin-bottom: 2px; width: 100%; }
     }
   </style>
 </head>
@@ -149,7 +162,7 @@
     <header>
       <img src="profile.jpg" alt="小島美寿穂" class="profile-img">
       <h1>小島美寿穂</h1>
-      <p class="subtitle">Narrator / Voice Actor（テアトルアカデミー所属）</p>
+      <p class="subtitle">ナレーター／俳優（テアトルアカデミー所属）</p>
     </header>
 
     <!-- ボイスサンプル -->
@@ -158,52 +171,49 @@
       
       <div class="audio-item">
         <div class="audio-title">名乗り</div>
-        <audio controls src="sample0.mp3"></audio>
+        <audio controls src="sample0.mp3">お使いのブラウザは音声再生に対応していません。</audio>
       </div>
 
       <div class="audio-item">
         <div class="audio-title">カフェ（語り・ナチュラル）</div>
-        <audio controls src="sample1.mp3"></audio>
+        <audio controls src="sample1.mp3">お使いのブラウザは音声再生に対応していません。</audio>
       </div>
 
       <div class="audio-item">
         <div class="audio-title">アーティスト紹介（クール・トーン低め）</div>
-        <audio controls src="sample2.mp3"></audio>
+        <audio controls src="sample2.mp3">お使いのブラウザは音声再生に対応していません。</audio>
       </div>
 
       <div class="audio-item">
         <div class="audio-title">AI（誠実・ストレート）</div>
-        <audio controls src="sample3.mp3"></audio>
+        <audio controls src="sample3.mp3">お使いのブラウザは音声再生に対応していません。</audio>
       </div>
 
       <div class="audio-item">
         <div class="audio-title">VPドキュメント（温かみ・語り）</div>
-        <audio controls src="sample4.mp3"></audio>
+        <audio controls src="sample4.mp3">お使いのブラウザは音声再生に対応していません。</audio>
       </div>
     </section>
 
     <!-- プロフィール・実績 -->
     <section>
       <h2>Profile & Performance</h2>
-      <p style="margin-bottom: 12px; font-size: 0.9rem;">
-        ストレートナレーションからドキュメンタリー、番組ナレーションまで、深みと世界観のある声でお応えします。
-      </p>
 
       <div class="profile-section-title">【出演歴】</div>
       <ul class="history-list">
         <li>
           <strong>■ ナレーション</strong><br>
           ・BS12「パン日和」#10（2025年11月11日オンエア）
-          <a href="https://youtu.be/7AaRRDGsdHY" target="_blank" rel="noopener" class="inline-link">[YouTube]</a>
+          <a href="https://youtu.be/7AaRRDGsdHY" target="_blank" rel="noopener noreferrer" class="inline-link">[YouTube]</a>
         </li>
         <li style="margin-top: 8px;">
           <strong>■ 舞台・演劇</strong><br>
           ・モザイクシェイクスピア「この世界全てが一つの舞台」（2026年6月 / 演出: 大河内直子）
-          <a href="https://x.com/theatreacademy/status/2067931503670308887" target="_blank" rel="noopener" class="inline-link">[詳細]</a><br>
+          <a href="https://x.com/theatreacademy/status/2067931503670308887" target="_blank" rel="noopener noreferrer" class="inline-link">[詳細]</a><br>
           ・劇団Focus × テアトルアカデミー「未来は僕らの手の中」（2025年秋 / 演出: 菅野臣太朗）
-          <a href="https://playjapan.jp/focus-theatre2025autumn.html" target="_blank" rel="noopener" class="inline-link">[詳細]</a><br>
+          <a href="https://playjapan.jp/focus-theatre2025autumn.html" target="_blank" rel="noopener noreferrer" class="inline-link">[詳細]</a><br>
           ・劇団Focus × テアトルアカデミー「君が咲く頃」（2025年春 / 演出: 菅野臣太朗）
-          <a href="https://playjapan.jp/focus-theatre2025spring.html" target="_blank" rel="noopener" class="inline-link">[詳細]</a>
+          <a href="https://playjapan.jp/focus-theatre2025spring.html" target="_blank" rel="noopener noreferrer" class="inline-link">[詳細]</a>
         </li>
       </ul>
 
@@ -217,18 +227,19 @@
         <li>・セガ ドリームキャスト 警告メッセージナレーション（1998年）</li>
         <li>
           ・第38回全国高等学校演劇大会 優秀賞（1992年 / 前橋女子高等学校『MORAL』経済学役）
-          <a href="https://koenkyo.main.jp/?page_id=6642" target="_blank" rel="noopener" class="inline-link">[記録]</a>
+          <a href="https://koenkyo.main.jp/?page_id=6642" target="_blank" rel="noopener noreferrer" class="inline-link">[記録]</a>
         </li>
       </ul>
 
       <ul class="profile-list" style="border-top: 1px solid var(--border-color); padding-top: 14px; margin-top: 14px;">
-        <li><strong>ボイス傾向：</strong>ストレート、CM、ドキュメンタリー、VP、朗読</li>
-        <li><strong>特技・強み：</strong>多言語学習（英語・仏語等）、Webデザイン・制作、小学校読み聞かせボランティア、歌唱</li>
-        <li><strong>保有資格：</strong>保育士、学芸員（埼玉おもちゃ美術館）、FP2級、カラーコーディネーター2級</li>
-        <li><strong>趣味：</strong>観劇、講談</li>
+        <li><strong>特技・強み：</strong><span>多言語学習（英語・仏語等）、Webデザイン・制作、小学校読み聞かせボランティア、歌唱</span></li>
+        <li><strong>保有資格：</strong><span>保育士、学芸員（埼玉おもちゃ美術館）、FP2級、カラーコーディネーター2級</span></li>
+        <li><strong>趣味：</strong><span>観劇、講談</span></li>
         <li class="sns-links"><strong>SNS：</strong>
-          <a href="https://www.instagram.com/mizuho_voice/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> Instagram</a>
-          <a href="https://www.youtube.com/@mizuho_voice" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i> YouTube</a>
+          <div>
+            <a href="https://www.instagram.com/mizuho_voice/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            <a href="https://www.youtube.com/@mizuho_voice" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i> YouTube</a>
+          </div>
         </li>
       </ul>
     </section>
@@ -237,7 +248,7 @@
     <section>
       <h2>Contact</h2>
       <div class="contact-info">
-        出演案件、ナレーション収録、その他のお仕事のご依頼・お問い合わせは、下記窓口までご連絡お願いいたします。<br><br>
+        お仕事のご依頼・お問い合わせは、下記窓口までご連絡お願いいたします。<br><br>
         <strong>株式会社テアトルアカデミー 声優サポートチーム</strong><br>
         E-mail: plusvoice@theatre.co.jp
       </div>
@@ -246,4 +257,4 @@
   </div>
 
 </body>
-</html>s
+</html>
