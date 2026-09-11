@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>小島美寿穂 | Voice Portfolio</title>
+  <!-- アイコン表示用のFont Awesomeを読み込み -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
     :root {
       --bg-color: #f8f9fa;
@@ -17,60 +19,108 @@
       font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Hiragino Kaku Gothic ProN", sans-serif;
       background-color: var(--bg-color);
       color: var(--text-color);
-      line-height: 1.7;
+      line-height: 1.6;
       padding: 20px;
     }
     .container {
       max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
+      margin: 30px auto;
+      padding: 0 15px;
     }
     header {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
     .profile-img {
-      width: 160px;
-      height: 160px;
+      width: 140px;
+      height: 140px;
       object-fit: cover;
       border-radius: 50%;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       border: 3px solid #fff;
     }
-    h1 { font-size: 2rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 8px; }
-    p.subtitle { color: #6c757d; font-size: 0.95rem; }
+    h1 { font-size: 1.8rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 6px; }
+    p.subtitle { color: #6c757d; font-size: 0.9rem; }
     
     section {
       background: var(--card-bg);
       border-radius: 8px;
-      padding: 30px;
-      margin-bottom: 30px;
+      padding: 24px;
+      margin-bottom: 24px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.04);
       border: 1px solid var(--border-color);
     }
     h2 {
-      font-size: 1.25rem;
+      font-size: 1.15rem;
       border-bottom: 2px solid var(--accent-color);
-      padding-bottom: 8px;
-      margin-bottom: 20px;
+      padding-bottom: 6px;
+      margin-bottom: 16px;
     }
     .audio-item {
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
     .audio-item:last-child { margin-bottom: 0; }
-    .audio-title { font-weight: bold; font-size: 0.95rem; margin-bottom: 6px; }
-    audio { width: 100%; margin-top: 5px; }
+    .audio-title { font-weight: bold; font-size: 0.9rem; margin-bottom: 4px; }
+    audio { width: 100%; margin-top: 4px; }
     
-    .profile-bio {
-      margin-bottom: 20px;
-      font-size: 0.95rem;
-      white-space: pre-wrap;
+    .profile-section-title {
+      font-size: 1rem;
+      font-weight: bold;
+      color: var(--accent-color);
+      margin: 16px 0 8px;
     }
-    ul.profile-list { list-style: none; }
-    ul.profile-list li { margin-bottom: 10px; font-size: 0.95rem; }
-    ul.profile-list strong { display: inline-block; width: 110px; color: #495057; }
+    .history-list {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 12px;
+    }
+    .history-list li {
+      margin-bottom: 8px;
+      font-size: 0.88rem;
+    }
+    .history-sub {
+      font-size: 0.82rem;
+      color: #6c757d;
+      display: block;
+      margin-top: 2px;
+    }
+    .inline-link {
+      color: var(--accent-color);
+      font-size: 0.82rem;
+      margin-left: 6px;
+      text-decoration: none;
+    }
+    .inline-link:hover { text-decoration: underline; }
+
+    ul.profile-list { list-style: none; padding-left: 0; }
+    ul.profile-list li { margin-bottom: 8px; font-size: 0.88rem; }
+    ul.profile-list strong { display: inline-block; width: 100px; color: #495057; }
     
+    /* SNSアイコン用スタイル */
+    .sns-links a {
+      color: var(--text-color);
+      text-decoration: none;
+      margin-right: 16px;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .sns-links a:hover {
+      color: var(--accent-color);
+    }
+    .sns-links i {
+      font-size: 1.1rem;
+    }
+    .fa-instagram { color: #e1306c; }
+    .fa-youtube { color: #ff0000; }
+
+    .contact-info {
+      font-size: 0.88rem;
+      margin-bottom: 16px;
+      line-height: 1.7;
+    }
     .contact-btn {
       display: block;
       width: 100%;
@@ -86,8 +136,8 @@
     .contact-btn:hover { opacity: 0.9; }
     
     @media (max-width: 600px) {
-      .container { margin: 20px auto; padding: 0 10px; }
-      section { padding: 20px; }
+      .container { margin: 15px auto; padding: 0 5px; }
+      section { padding: 18px; }
       ul.profile-list li strong { display: block; margin-bottom: 2px; }
     }
   </style>
@@ -96,41 +146,96 @@
 
   <div class="container">
     <header>
-      <!-- 宣材写真の画像ファイル名（profile.jpg）を指定 -->
       <img src="profile.jpg" alt="小島美寿穂" class="profile-img">
       <h1>小島美寿穂</h1>
-      <p class="subtitle">Narrator / Voice Actor</p>
+      <p class="subtitle">Narrator / Voice Actor（テアトルアカデミー所属）</p>
     </header>
 
     <!-- ボイスサンプル -->
     <section>
       <h2>Voice Samples</h2>
       <div class="audio-item">
-        <div class="audio-title">メインボイスサンプル（CM / ナレーション）</div>
-        <audio controls src="sample.mp3"></audio>
+        <div class="audio-title">名乗り</div>
+        <audio controls src="sample0.mp3"></audio>
+      </div>
+      <div class="audio-item">
+        <div class="audio-title">グルメ番組（高級感・しっとり）</div>
+        <audio controls src="sample1.mp3"></audio>
+      </div>
+      <div class="audio-item">
+        <div class="audio-title">音楽番組（クール・トーン低め）</div>
+        <audio controls src="sample2.mp3"></audio>
+      </div>
+      <div class="audio-item">
+        <div class="audio-title">ビジネス解説（誠実・ストレート）</div>
+        <audio controls src="sample3.mp3"></audio>
+      </div>
+      <div class="audio-item">
+        <div class="audio-title">ドキュメンタリー（温かみ・語り）</div>
+        <audio controls src="sample4.mp3"></audio>
       </div>
     </section>
 
     <!-- プロフィール・実績 -->
     <section>
-      <h2>Profile & Equipment</h2>
-      <!-- ここにお持ちのプロフィール文章を書き込んでください -->
-      <p class="profile-bio">
-ここにプロフィールの自己紹介文や経歴を入力します。
-ストレートナレーションからドキュメンタリー、CMまで、深みのある声でお応えします。
+      <h2>Profile & Performance</h2>
+      <p style="margin-bottom: 12px; font-size: 0.9rem;">
+        ストレートナレーションからドキュメンタリー、番組ナレーションまで、深みと世界観のある声でお応えします。
       </p>
-      <ul class="profile-list">
-        <li><strong>ボイス傾向：</strong>ストレート、CM、ドキュメンタリー、VP</li>
-        <li><strong>収録環境：</strong>宅録可（DAW: Logic Pro / iZotope RX）</li>
-        <li><strong>使用機材：</strong>Apogee MiC Plus, Rycote InVision USM</li>
+
+      <div class="profile-section-title">【出演歴】</div>
+      <ul class="history-list">
+        <li>
+          <strong>■ ナレーション</strong><br>
+          ・BS12「パン日和」#10（2025年11月11日オンエア）
+          <a href="https://youtu.be/7AaRRDGsdHY" target="_blank" rel="noopener" class="inline-link">[YouTube]</a>
+        </li>
+        <li style="margin-top: 8px;">
+          <strong>■ 舞台・演劇</strong><br>
+          ・モザイクシェイクスピア「この世界全てが一つの舞台」（2026年6月 / 演出: 大河内直子）
+          <a href="https://x.com/theatreacademy/status/2067931503670308887" target="_blank" rel="noopener" class="inline-link">[詳細]</a><br>
+          ・劇団Focus × テアトルアカデミー「未来は僕らの手の中」（2025年秋 / 演出: 菅野臣太朗）
+          <a href="https://playjapan.jp/focus-theatre2025autumn.html" target="_blank" rel="noopener" class="inline-link">[詳細]</a><br>
+          ・劇団Focus × テアトルアカデミー「君が咲く頃」（2025年春 / 演出: 菅野臣太朗）
+          <a href="https://playjapan.jp/focus-theatre2025spring.html" target="_blank" rel="noopener" class="inline-link">[詳細]</a>
+        </li>
+      </ul>
+
+      <div class="profile-section-title">【経歴・主な実績】</div>
+      <ul class="history-list">
+        <li>
+          ・よこざわけい子声優ナレータースクール ナレーターコース修了（2006年）
+          <span class="history-sub">卒業公演「神々のトロイア」女神レートー役（内幸町ホール）/ ゆーりんプロ研究生</span>
+        </li>
+        <li>・サイエンススタジオ・マリー「キュリー夫人の理科教室」MC（2008年 / 科学技術館）</li>
+        <li>・セガ ドリームキャスト 警告メッセージナレーション（1998年）</li>
+        <li>
+          ・第38回全国高等学校演劇大会 優秀賞（1992年 / 前橋女子高等学校『MORAL』経済学役）
+          <a href="https://koenkyo.main.jp/?page_id=6642" target="_blank" rel="noopener" class="inline-link">[記録]</a>
+        </li>
+      </ul>
+
+      <ul class="profile-list" style="border-top: 1px solid var(--border-color); padding-top: 14px; margin-top: 14px;">
+        <li><strong>ボイス傾向：</strong>ストレート、CM、ドキュメンタリー、VP、朗読</li>
+        <li><strong>特技・強み：</strong>多言語学習（英語・仏語等）、Webデザイン・制作、小学校読み聞かせボランティア、歌唱</li>
+        <li><strong>保有資格：</strong>保育士、学芸員（埼玉おもちゃ美術館）、FP2級、カラーコーディネーター2級</li>
+        <li><strong>趣味：</strong>観劇、講談</li>
+        <li class="sns-links"><strong>SNS：</strong>
+          <a href="https://www.instagram.com/mizuho_voice/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> Instagram</a>
+          <a href="https://www.youtube.com/@mizuho_voice" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i> YouTube</a>
+        </li>
       </ul>
     </section>
 
     <!-- お問い合わせ -->
     <section>
       <h2>Contact</h2>
-      <p style="margin-bottom: 15px; font-size: 0.9rem;">お仕事のご依頼・ボイスサンプルに関するお問い合わせはこちらからお願いいたします。</p>
-      <a href="mailto:your-email@example.com" class="contact-btn">お問い合わせはこちら</a>
+      <div class="contact-info">
+        出演案件、ナレーション収録、その他のお仕事のご依頼・お問い合わせは、下記窓口までご連絡お願いいたします。<br><br>
+        <strong>株式会社テアトルアカデミー 声優サポートチーム</strong><br>
+        E-mail: plusvoice@theatre.co.jp
+      </div>
+      <a href="mailto:plusvoice@theatre.co.jp" class="contact-btn">メールでお問い合わせする</a>
     </section>
   </div>
 
